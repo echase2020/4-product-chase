@@ -6,26 +6,223 @@
         <!-- character encoding -->
         <meta charset="UTF-8">
         <!-- title tag -->
-        <title>Product/Company Page Project-Chase</title>
+        <title>Product/Company Page Project - Mr. Messina</title>
         <!-- mobile-friendly viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- W3.CSS stylesheet -->
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     </head>
 
     <body>
-        
-            <div class="w3-bar w3-red">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-    </div>
 
+        <!-- top nav, desktop and tablet -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme">
+                <a href="#lessons" class="w3-bar-item w3-button">Lessons</a>
+                <a href="#skis" class="w3-bar-item w3-button w3-hide-small">Skis</a>
+                <a href="#poles" class="w3-bar-item w3-button w3-hide-small">Poles</a>
+                <a href="#poles" class="w3-bar-item w3-button w3-hide-small">Gear</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+            </div>
+            <div id="mobileNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#training" class="w3-bar-item w3-button">Training</a>
+                <a href="#teams" class="w3-bar-item w3-button">Teams</a>
+            </div>
+        </div>
+        <!-- top nav, mobile -->
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Ski Shop and Lessons</span>
+            </div>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div class="w3-padding-64" id="about">
+
+            <div class="w3-row w3-container">
+                <h1>About</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-snowflake-o"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2">
+                            <h3>Lessons</h3>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-shopping-bag"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2">
+                            <h3>Gear</h3>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-phone-square"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2">
+                            <h3>Contact</h3>  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+        </div>
+
+
+        <!-- Container (Training Section) -->
+        <div class="w3-padding-64" id="lessons">
+            
+            <div class="w3-row w3-container">
+                <h1>Lessons</h1>
+            </div>
+            
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div class="w3-card w3-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WrUGac_EoTE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <button onclick="accordion('dribbling')" class="w3-btn w3-block w3-theme-l1 w3-left-align w3-border">Stopping<i class="fa fa-caret-down w3-right w3-xlarge"></i>
+                    </button>
+                    <div id="dribbling" class="w3-container w3-hide w3-theme-l5">
+                        <h4></h4>
+                        <p>Keep turning both skis across the hill until you slow down and stop. Then try a sweeping turn to the left, starting with your skis in the snow plough shape and finishing with them parallel. If you find it difficult to pick the ski up then just make sure all your weight is on the downhill/outside ski.</p>
+                    </div>
+                    
+                    <button onclick="accordion('positioning')" class="w3-btn w3-block w3-theme-l1 w3-left-align">Making it down the mountain</button>
+
+                    <div id="positioning" class="w3-container w3-hide w3-theme-l5">
+                        <h4>Turning</h4>
+                        <p>Parallel turns are turns where the skis always stay parallel to each other throughout each turn. This is generally considered to be the point where proper skiing begins, as up until now all the turns have used the snowplough, which is rarely used as soon as you don't need it.</p>
+                        <p>On this page we are going to look at basic parallel turns. Parallel turns which use all the principles of parallel skiing, but to which extra techniques can be added to make the turns more advanced. These more advanced techniques are explained in further sections.</p>
+                    </div>
+
+                </div>
+                
+
+
+            </div>
+        </div>
+            
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-3 w3-display-container w3-opacity-min" id="home">
+        </div>
+        <div class="w3-padding-64" id="skis">
+        <h1 class="w3-center">Skis</h1>
         
+        <div class="w3-card w3-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GFxkA4jvBY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+            
+            <div class="w3-container">
+  <h2>Types of Skis</h2>
+  <p>There are mnay types of skis ranging from skill level to what kind of skiing you want to do. There are skis for beginner, intermediate, and exert skiers. There are also skis for stunts and just regular skiing. Most skis you see on the mountain are known as all mountain skis but there are skis that are bendier than others and have twin tips.</p>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Types of skis</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>The types of skis</h2>
+      </header>
+      <div class="w3-container">
+        <p>There are many types of skis out there suited to different types of skiing, and to understand why, first we need to have a basic understanding of how a ski works. There is a lot more to a ski than a lot of people realise, and things you might not have noticed can make a large difference to how a ski performs.
+
+Below are explanations on what each part and property of a ski does, along with how all of these parts and properties can come together to make skis suited to different types or styles of skiing.</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>The types of Skis</p>
+      </footer>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-4 w3-display-container w3-opacity-min" id="home">
+        </div>
+        <div class="w3-padding-64" id="poles">
+        <h1 class="w3-center">Poles/Gear</h1>
+        
+        <div class="w3-card w3-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHdE2YCRjck" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+            
+            <div class="w3-container">
+  <h2>Gear</h2>
+  <p>Here we have many different types of brands and materials to make you enjoy your ski trips to the fullest extent. Ski, Snowboard, Wakeboard, Skateboard Gear & Clothing: Enjoy Free Shipping, Low Price Guarantee, Product Reviews, Shopping Tools and a little flavor. We also sell goggles and helmets for any age or size. </p>
+ <div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="openCity('London')">Poles</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Goggles</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Jackets</button>
+</div>
+
+<div id="London" class="w3-container city">
+  <h2>Poles</h2>
+  <p>
+It’s hard not to admire the utility of the humble ski pole. A pair of ski poles serves a number of purposes, from helping you set a rhythm for turns, to propelling you along flat sections of trail, to having a crutch to lean on in long lift lines. For this list we’ve included poles designed for running laps down groomers at the resort and backcountry use. Choosing a suitable ski pole is all about finding the right combination of features and construction for your skiing style and terrain. For further guidance, see our comparison table and buying advice below the picks. Otherwise, below are our favorite ski poles for the 2017-2018 season. To complete your kit, check out our articles on the best all-mountain skis and best downhill boots.</p>
+</div>
+
+<div id="Paris" class="w3-container city" style="display:none">
+  <h2>Goggles</h2>
+  <p>There are many different types of goggles we have here. They are all high quality and at very reasonable prices. From $100-$500.</p>
+    <img src="img/oakley.jpg" class="w3-image" alt="Goggles">
+</div>
+
+<div id="Tokyo" class="w3-container city" style="display:none">
+  <h2>Jackets</h2>
+  <p>We also have many different types of jackets. From North Face to Patagonia we have it all. All different types of materials and for different types of sports.</p>
+    <img src="img/patagonia.jpeg" class="w3-image" alt="Jackets">
+</div>
+
+<script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+</div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="js/topNav.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/tabs.js"></script>
+
+
     </body>
 
 </html>
